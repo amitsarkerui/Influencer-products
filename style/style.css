@@ -1,26 +1,33 @@
-body{
+/* Common Css */
+* {
     box-sizing: border-box;
+}
+
+body{
+
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 ul{
     list-style: none;
+    /* padding-inline-start: 0px; */
 }
 a{
     text-decoration: none;
 }
-h1, p{
+h1, p, li{
     margin: 0;
 }
 .container{
     max-width: 1140px;
     margin: 0 auto;
 }
-/* ------------Header Start------------ */
-header{
-    height: 100vh;
+
+img {
+    max-width: 100%;
 }
+/* ------------Header Start------------ */
 .navigation{
     display: flex;
     justify-content: space-between;
@@ -42,13 +49,22 @@ header{
     font-size: 16px;
     color: #3A3A3A;
 }
-.headerContent{
-    margin-top: 160px;
-}
+/* ------------- Header End ------------- */
+/* ---------- Banner Start ---------- */
 .headerContentWrapper{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 120px;
+}
+.herocontent{
+    width: 50%;
+}
+.headerImage{
+    width: 50%;
+}
+.headerImage img{
+    margin-left: 110px;
 }
 .herocontent h1{
     font-weight: 700;
@@ -61,7 +77,7 @@ header{
     font-size: 16px;
     line-height: 24px;
     color: #3A3A3A;
-    width: 505px;
+    /* width: 505px; */
     margin-top: 16px;
     margin-bottom: 24px;
     }
@@ -75,7 +91,79 @@ header{
     padding: 10px 24px;
     border-radius: 24px;
 }
-/* ------------- Header End ------------- */
+
+/* ---------- Banner End ----------- */
 
 
-/* ------------Responsive Design ------------ */
+
+
+/* ---------- Responsive Design ---------- */
+
+/* ----------
+        Medium Devices
+        ------------------ */
+@media screen and (min-width: 577px) and (max-width:992px) {
+    .navigation{
+        display: flex;
+        flex-direction: column;
+    }
+    .headerContentWrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 0 30px;
+        margin-top: 50px;
+    }
+    .herocontent{
+        width: 100%;
+    }
+    .headerImage{
+        width: 100%;
+    }
+    .headerImage img{
+        margin-left: 0;
+    }
+}
+
+/* ----------
+        Small Devices
+        --------------- */
+    @media screen and (max-width: 576px) {
+        .navigation{
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            padding: 0 16px;
+        }
+        .headerContentWrapper{
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 0 30px;
+            margin-top: 24px;
+        }
+        .herocontent{
+            width: 100%;
+        }
+        .headerImage{
+            width: 100%;
+        }
+        .headerImage img{
+            margin-left: 0;
+        }
+        .herocontent h1{
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 42px;
+            color: #3A3A3A;
+        }
+        .herocontent p{
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            color: #3A3A3A;
+        }
+        .navLinks a{
+            font-weight: 600;
+            font-size: 12px;
+            color: #3A3A3A;
+            gap: 14px;
+    }    
